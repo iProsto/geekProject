@@ -1,9 +1,10 @@
 let app = require('express')();
+let home = require('./routes/home/home');
+
 const PORT = process.env.PORT || 3000;
 
-app.get('/',function(req, res) {
-   res.status(200).send('Home');
-});
+
+app.use('/', home);
 
 
 app.listen(PORT, function(){
