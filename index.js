@@ -1,5 +1,5 @@
-let PORT = require('./config-server').PORT;
 let app = require('express')();
+const PORT = process.env.PORT || 3000;
 
 app.get('/',function(req, res) {
    res.status(200).send('Home');
